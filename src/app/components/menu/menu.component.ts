@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReportService } from 'src/app/services/report.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private reportService:ReportService) { }
 
   ngOnInit(): void {
+   
+      this.reportService.getReportbonos().subscribe((response:any)=>{
+       console.log(response);
+      });
   }
+
+  
 
 }

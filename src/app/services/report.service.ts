@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { IReport } from '../models/report.interface';
+import { WebRequestService } from './web-request.service';
 
 @Injectable({
   providedIn: 'root'
@@ -21,11 +22,17 @@ export class ReportService {
   ];
 
 private _reportSubject : BehaviorSubject<Array<IReport>>=new BehaviorSubject(this.reports)
-  constructor() { }
+  constructor(private webReqService:WebRequestService) { }
 
 
   public getReport(): Observable<Array<IReport>>
   {
     return this._reportSubject.asObservable();
+  }
+
+  
+  public getReportbonos()
+  {
+      return this.webReqService.get('report');
   }
 }

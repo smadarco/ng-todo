@@ -1,10 +1,8 @@
+import { convertUpdateArguments } from '@angular/compiler/src/compiler_util/expression_converter';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IReport } from 'src/app/models/report.interface';
 import { ReportService } from 'src/app/services/report.service';
-
-
-
 
 @Component({
   selector: 'app-report',
@@ -41,3 +39,5 @@ export class ReportComponent implements OnInit ,OnDestroy{
   }
 
 }
+
+
