@@ -38,11 +38,11 @@ export class DialogOverviewExampleComponent implements OnInit {
   
     this.subscription.add(
       this.reportService.getLocation().subscribe(data=>{
-    //  this.name= data;
+     // this.location= data;
        console.log(data);
       })
  
-     )
+     );
    }
   }
 

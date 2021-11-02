@@ -1,16 +1,17 @@
 
 
 <ol>
-    <li>
+    
       <mat-form-field appearance="fill">
         <mat-label>location of the space station</mat-label>
         <input matInput [(ngModel)]="location">
       </mat-form-field>
-    </li>
-    <li>
+    
+   
       <button mat-raised-button (click)="openDialog()">open dialog</button>
-    </li>
+   
     <li *ngIf="note">
-      You chose: <i>{{note}}</i>
+      
+      You note: <i>{{note}}</i>
     </li>
   </ol> 
