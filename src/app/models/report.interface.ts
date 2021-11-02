@@ -1,7 +1,7 @@
 export interface IReport
 {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  message: string;
+  timestamp: number;
+  iss_position: Array<{ latitude: string; longitude: string }>;
 }
+
